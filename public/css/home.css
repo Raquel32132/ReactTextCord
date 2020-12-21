@@ -1,0 +1,126 @@
+
+/* mobile */
+body {
+    background: linear-gradient(329.54deg, #846bc0 0%, #5a1ebb 100%);
+    font-family: "verdana", "arial", sans-serif;
+    margin: 0;
+    padding: 0;
+    color: #d3d3d3;
+}
+
+.container {
+    width: 95%;
+    margin: auto;
+    padding: 20px;
+    box-sizing: border-box;
+    height: 100vh;
+}
+
+img {
+    width: 100%;
+}
+
+.celular {
+    display: flex;
+    justify-content: space-evenly;
+}
+
+#imglogo {
+    text-align: center;
+    width: 80px;
+}
+
+main {
+    text-align: center;
+}
+
+main a {
+    width: 80px;
+    height: 80px;
+    background: #8fbef3;
+    border: none;
+    border-radius: 16px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin: auto;
+}
+
+main strong {
+    font-size: 26px;
+}
+
+main a:active {
+    background: #4a97f0;
+}
+
+
+
+/* desktop version */
+@media (min-width: 760px) {
+
+    body {
+        background: linear-gradient(329.54deg, #846bc0 0%, #5a1ebb 100%);
+        font-family: "verdana", "arial", sans-serif;
+        margin: 0;
+        padding: 0;
+        color: #d3d3d3;
+    }
+
+    .container {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        min-height: 100vh;
+    }
+
+    #imglogo {
+        width: 210px;
+        margin-left: 120px;
+    }
+
+    main {
+        align-items: center;
+        justify-content: center;
+        margin-right: 120px;
+    }
+
+    main strong{
+        font-size: 50px;
+    }
+
+    main h1 {
+        font-size: 40px;
+    }
+
+    main p {
+        font-size: 20px;
+    }
+
+    main a img {
+        width: 80px;
+    }
+
+    main a {
+        width: 70px;
+        height: 70px;
+        background: #8fbef3;
+        border: none;
+        border-radius: 16px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        margin: auto;
+    }
+
+    main a:hover {
+        background: #4a97f0;
+        transition: background-color 0.5s;
+    }
+
+
+    html{
+        overflow-y:hidden;
+    }
+
+} 

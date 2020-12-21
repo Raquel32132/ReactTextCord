@@ -1,0 +1,142 @@
+/* mobile version*/
+body {
+    background: linear-gradient(329.54deg, #846bc0 0%, #5a1ebb 100%);
+    font-family: "verdana", "arial", sans-serif;
+    margin: 0;
+    padding: 0;
+    color: #d3d3d3;
+}
+
+.container {
+    width: 95%;
+    margin: auto;
+    box-sizing: border-box;
+    min-height: 100vh;
+}
+
+aside {
+    text-align: center;
+}
+
+aside img {
+    display: none;
+}
+
+main {
+    text-align: center;
+    margin-top: 140px;
+}
+
+main .link {
+    border: none;
+    border-radius: 16px;
+    width: 200px;
+    height: 40px;
+    background: #8fbef3;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin: auto;
+    text-decoration: none;
+    color: black;
+}
+
+main .link:active {
+    background: #4a97f0;
+}
+
+a {
+    text-decoration: none;
+}
+
+h3 {
+    color: #d3d3d3;
+}
+
+/* desktop version */
+@media (min-width: 760px) {
+
+    body {
+        background: #dad3e6;
+        font-family: "verdana", "arial", sans-serif;
+    }
+
+    .container {
+        align-items: center;
+        min-height: 100vh;
+        padding: 0;
+        margin: 0;
+    }
+
+    aside {
+        background: linear-gradient(329.54deg, #846bc0 0%, #5a1ebb 100%);
+        position: fixed;
+        height: 100%;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        width: 200px;
+        font-size: 24px;
+    }
+
+    aside img {
+        display: block;
+        width: 70px;
+    }
+
+    main {
+        height: 100vh;
+        width: 600px;
+        margin: auto;  
+        align-items: center;
+        padding-top: 100px;
+        margin-left: 400px;
+        border-radius: 8px;
+        background: white;
+    }
+
+    main .link {
+        border: none;
+        border-radius: 16px;
+        width: 300px;
+        height: 46px;
+        background: #8fbef3;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        margin: auto;
+        font-size: 16px;
+        text-decoration: none;
+        color: black;
+        margin-top: 10px;
+    }
+
+    main p {
+        border-bottom: 1px solid #dad3e6;
+        padding-bottom: 30px;
+        width: 500px;
+        margin: auto;
+        margin-bottom: 60px;
+        font-size: 40px;
+        color: rgb(27, 27, 27);
+    }
+
+    main .link:hover{
+        background: #4a97f0;
+        cursor: pointer;
+        transition: background-color 0.5s;
+    }
+
+    html {
+        overflow-y: hidden;
+    }
+
+    a {
+        text-decoration: none;
+    }
+    
+    h3 {
+        color: #d3d3d3;
+    }
+
+}
