@@ -1,7 +1,7 @@
 import React, { Component } from 'react';
 import { Link } from 'react-router-dom';
 import { Helmet } from 'react-helmet';
-import Transcription from '../components/Transcription'
+import Transcription from '../components/Transcription';
 
 
 function Locutor() {
@@ -19,8 +19,6 @@ function Locutor() {
                     <h3>Textcord</h3>
                 </Link>
                 
-                
-
                 <ul>
                     <h5>Leitores:</h5>
                     <li>teste</li>
@@ -30,18 +28,12 @@ function Locutor() {
                     Sair da sala
                 </Link>
 
-                <button>
-                    Baixar texto
-                </button>
                 
+
             </aside>
 
             <main>
-
-                <div>
-                    <Transcription/>
-                </div>
-
+                <Transcription/>
             </main>
 
         </div>
