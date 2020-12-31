@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { useEffect } from 'react';
 import SpeechRecognition, { useSpeechRecognition } from 'react-speech-recognition';
 import Download from '../components/Download';
 import useChat from '../components/UseChat';
@@ -10,6 +10,11 @@ const Transcription = (props) => {
   const { message, sendMessage } = useChat(roomId);
 
   const { transcript } = useSpeechRecognition()
+
+  useEffect(() => {
+    handleSendMessage();
+  },[transcript])
+
 
   if (!SpeechRecognition.browserSupportsSpeechRecognition()) {
     return null
@@ -24,7 +29,7 @@ const Transcription = (props) => {
     continuous: true,
     language: 'pt-br'
     })
-    
+
   }
 
   return (
@@ -34,8 +39,6 @@ const Transcription = (props) => {
           <p>
             {message.body}
           </p> 
-          
-          {/* <p>{transcript}</p> */}
         </div>
 
          <div className="buttons">
@@ -46,11 +49,6 @@ const Transcription = (props) => {
 
            <button onClick={SpeechRecognition.stopListening}>
              Pausar fala
-           </button>
-
-           
-           <button onClick={handleSendMessage}>
-             mandarmensagem
            </button>
 
            <Download texto={transcript}/>
