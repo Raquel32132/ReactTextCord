@@ -1,26 +1,45 @@
-import React from 'react'
-import SpeechRecognition, { useSpeechRecognition } from 'react-speech-recognition'
+import React from 'react';
+import SpeechRecognition, { useSpeechRecognition } from 'react-speech-recognition';
 import Download from '../components/Download';
+import useChat from '../components/UseChat';
 
-const Transcription = () => {
-  const { transcript  } = useSpeechRecognition()
+
+const Transcription = (props) => {
+
+  const { roomId } = props.head;
+  const { message, sendMessage } = useChat(roomId);
+
+  const { transcript } = useSpeechRecognition()
 
   if (!SpeechRecognition.browserSupportsSpeechRecognition()) {
     return null
   }
 
-  const listenContinuously = () => SpeechRecognition.startListening({
+  const handleSendMessage = () => {
+    sendMessage(transcript);
+  }
+
+  const listenContinuously = () => {
+    SpeechRecognition.startListening({
     continuous: true,
     language: 'pt-br'
-  })
+    })
+    
+  }
 
   return (
     <div>
+
         <div className="transcription">
-          <p>{transcript}</p> 
+          <p>
+            {message.body}
+          </p> 
+          
+          {/* <p>{transcript}</p> */}
         </div>
 
          <div className="buttons">
+           
            <button onClick={listenContinuously}>
              Iniciar fala
            </button> 
@@ -29,8 +48,12 @@ const Transcription = () => {
              Pausar fala
            </button>
 
-           <Download texto={transcript}/>
+           
+           <button onClick={handleSendMessage}>
+             mandarmensagem
+           </button>
 
+           <Download texto={transcript}/>
         </div>
     </div>
   )

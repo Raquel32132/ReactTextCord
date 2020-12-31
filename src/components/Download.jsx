@@ -1,4 +1,4 @@
-import React, { ReactDOM, Component, useState } from 'react';
+import React from 'react';
 
 const Download = (props) => {
 

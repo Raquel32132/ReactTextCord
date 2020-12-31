@@ -28,7 +28,7 @@ function Home() {
                         <br/>
                         <br/>
 
-                        <Link to={'/Login'}>
+                        <Link to={'/Entrar'}>
                             <img src={seta} alt="Ir para o login"/>
                         </Link> 
                     

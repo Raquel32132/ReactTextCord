@@ -1,15 +1,15 @@
 import React, { Component } from 'react';
 import { Link } from 'react-router-dom';
 import { Helmet } from 'react-helmet';
-import Transcription from '../components/Transcription';
+import TranscriptionLeitor from '../components/TranscriptionLeitor';
 
 
-function Locutor(props) {
+function Leitor() {
     return (
-        <div class="container">
+        <div className="container">
 
             <Helmet>
-                <link rel="stylesheet" href="/css/locutor.css"/>
+                <link rel="stylesheet" href="/css/leitor.css"/>
             </Helmet>
 
             <aside>
@@ -17,12 +17,9 @@ function Locutor(props) {
                 <Link className="link" to={'/'}>
                     <h3>Textcord</h3>
                 </Link>
-                
-                <ul>
-                    <h5>Leitores:</h5>
-                    <li>teste</li>
-                </ul>
-                
+
+                <h6>Locutor: </h6>
+
                 <Link className="sair" to={'/Login'}>
                     Sair da sala
                 </Link>
@@ -30,11 +27,12 @@ function Locutor(props) {
             </aside>
 
             <main>
-                <Transcription head={props.match.params}/>
+                <TranscriptionLeitor/>
             </main>
 
         </div>
     );
 }
 
-export default Locutor;
+export default Leitor;
+

@@ -1,9 +1,18 @@
+import React from 'react';
 import { Helmet } from 'react-helmet';
 import { Link } from 'react-router-dom';
 import icon from '../assets/images/logo.png';
 import setaVoltar from '../assets/images/seta-voltar.png';
       
 function Entrar() {
+
+    const [roomName, setRoomName] = React.useState("");
+
+    const handleRoomNameChange = (event) => {
+        setRoomName(event.target.value);
+    }
+
+
     return (
         <div className="container">
 
@@ -21,7 +30,7 @@ function Entrar() {
                 <img id="logoimg" src={icon} alt="Logo"/>
             
 
-                <Link className="link" to={'/Login'}>
+                <Link className="link" to={'/'}>
                     <img src={setaVoltar} alt="Voltar"/>
                 </Link>
                 
@@ -29,27 +38,25 @@ function Entrar() {
 
             <main>
 
-                <form action="">
-                    <fieldset>
+                <div className="fieldset">
 
                         <legend>Entre em uma sala</legend>
 
                         <div className="input-box">
                             <label for="nome">Digite seu nome:</label>
-                            <input id="nome" name="nome" required/>
+                            <input id="nome" name="nome"/>
                         </div>
 
                         <div className="input-box">
                             <label for="senha">Digite a senha da sala:</label>
-                            <input id="senha" name="senha" required/>
+                            <input type="text" value={roomName} onChange={handleRoomNameChange}/>
                         </div>
 
-                        <button type="submit">
+                        <Link to={`/${roomName}`}>
                             Entrar na sala
-                        </button>
+                        </Link>
 
-                    </fieldset>
-                </form>
+                </div>
 
             </main>
 

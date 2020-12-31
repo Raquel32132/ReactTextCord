@@ -47,13 +47,13 @@ aside .link {
     background: #4a97f0;
 }
 
-fieldset {
+.fieldset {
     border: none;
     text-align: center;
     margin-top: 40px;
 }
 
-fieldset legend {
+.fieldset legend {
     border-bottom: 1px solid black;
     padding-bottom: 10px;
     width: 240px;
@@ -158,11 +158,11 @@ h3 {
         background:white;
     }
 
-    fieldset {
+    .fieldset {
         color: rgb(27, 27, 27);
     }
 
-    fieldset legend {
+    .fieldset legend {
         border-bottom: 1px solid #dad3e6;
         padding-bottom: 30px;
         width: 500px;

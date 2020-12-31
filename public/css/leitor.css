@@ -22,12 +22,14 @@ aside {
     margin: auto;
 }
 
-aside h3 {
-    color: #d3d3d3;
+aside h6{
+    display: none;
+    margin-bottom: auto;
+    padding: 0;
 }
 
-aside ul, h4{
-    display: none;
+aside h3 {
+    color: #d3d3d3;
 }
 
 main button {
@@ -40,6 +42,15 @@ main button {
     color: black;
     font-size: 14px;
     margin: auto;
+    margin-top: 10px;
+}
+
+main {
+    text-align: center;
+}
+
+button:active {
+    background: #4a97f0;
 }
 
 .sair {
@@ -54,8 +65,8 @@ main button {
     font-size: 14px
 }
 
-.link {
-    text-decoration: none;
+.sair:active {
+    background: #4a97f0;
 }
 
 .transcription {
@@ -66,22 +77,8 @@ main button {
     overflow-y: scroll;
 }
 
-button:active {
-    background: #4a97f0;
-}
-
-.sair:active {
-    background: #4a97f0;
-}
-
-main {
-    text-align: center;
-}
-
-.buttons{
-    margin-top: 10px;
-    display: flex;
-    justify-content: space-between;
+.link {
+    text-decoration: none;
 }
 
 /* desktop version */
@@ -120,9 +117,10 @@ main {
         color: black;
         font-size: 14px;
         margin: 0;
+        margin-top: 10px;
     }
 
-    aside ul, h4{
+    aside h6{
         display: block;
     }
 
@@ -137,6 +135,17 @@ main {
         background: white;
     }
 
+    .transcription {
+        background: #dad3e6;
+        width: 700px;
+        height: 570px;
+        overflow-y: scroll;
+    }
+
+    .sair {
+        margin-bottom: 40px;
+    }
+
     button:hover {
         background: #4a97f0;
         cursor: pointer;
@@ -149,41 +158,10 @@ main {
         transition: background-color 0.5s;
     }
 
-    .transcription {
-        background: #dad3e6;
-        width: 700px;
-        height: 570px;
-        overflow-y: scroll;
-    }
-
-    .buttons {
-        padding-top: 18px;
-        width: 320px;
-        margin: auto;
-    }
-
-    .sair {
-        margin-bottom: 40px;
-    }
-
-    ul {
-        list-style-type: none;
-        margin-bottom: auto;
-        padding: 0;
-    }
-
-    li {
-        font-size: 16px;
-    }
-
     html {
         overflow-y: hidden;
     }
 
-    a {
-        text-decoration: none;
-    }
-    
     h3 {
         color: #d3d3d3;
     }
@@ -194,5 +172,5 @@ main {
         color: black;
         padding: 10px 10px 10px 10px;
     }
-}
 
+}
